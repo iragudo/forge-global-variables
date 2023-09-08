@@ -1,6 +1,12 @@
-# Forge Hello World
+# Background
+This [feature suggestion](https://jira.atlassian.com/browse/CONFCLOUD-3999) served as an inspiration for the creation of this app in order to showcase
+the value of Forge and how it can help customize a customer's site.
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in Confluence global settings. 
+And yes, [Forge](https://developer.atlassian.com/platform/forge/) is a built-in free feature in Atlassian cloud products like Bitbucket, Confluence, and Jira.
+
+# Forge Confluence Global Variables
+
+This project contains a Forge app written in Javascript that allows the creation of variables that can be used in Confluence pages, blogs, and templates in the form of a Macro.
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
@@ -10,7 +16,10 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 
 ## Quick start
 
-- Modify your app by editing the `src/index.jsx` file.
+- Register the app by running:
+```
+forge register
+```  
 
 - Build and deploy your app by running:
 ```
@@ -31,7 +40,8 @@ forge tunnel
 - Use the `forge deploy` command when you want to persist code changes.
 - Use the `forge install` command when you want to install the app on a new site.
 - Once the app is installed on a site, the site picks up the new app changes you deploy without needing to rerun the install command.
+- If `manifest.yml` is modified, run `forge deploy` again to reflect those changes then update the installation by running `forge install --upgrade`.
 
 ## Support
 
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+This is a project maintained by the author as part of a community blog post to serve as a reference for Confluence Cloud users who wants to customize their sites.
