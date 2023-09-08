@@ -1,0 +1,26 @@
+modules:
+  confluence:globalSettings:
+    - key: my-global-variables-global-settings-hello-world
+      function: main
+      title: My Global Variables
+      description: A hello world global settings.
+  macro:
+    - key: f-global-var-macro
+      function: main-macro
+      title: Global variable macro
+      description: Inserts global variable
+      layout: inline
+      config:
+        function: config-global-var-macro      
+  function:
+    - key: main
+      handler: index.run
+    - key: main-macro
+      handler: index.runMacro
+    - key: config-global-var-macro
+      handler: index.configMacro
+app:
+  id: ari:cloud:ecosystem::app/46711a74-3157-4a91-9849-cacae3f4f857
+permissions:
+  scopes:
+    - storage:app
